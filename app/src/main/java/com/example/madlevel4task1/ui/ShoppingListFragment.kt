@@ -28,11 +28,7 @@ class ShoppingListFragment : Fragment() {
 
     private lateinit var productRepository: ProductRepository
 
-    private var products: ArrayList<Product> = arrayListOf(
-        Product("some product", 2),
-        Product("some product 2", 3),
-        Product("some product 4", 4)
-    )
+    private var products: ArrayList<Product> = arrayListOf()
     private val productAdapter: ProductAdapter =
         ProductAdapter(products)
 
