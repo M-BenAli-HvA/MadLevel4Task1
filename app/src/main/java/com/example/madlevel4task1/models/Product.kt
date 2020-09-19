@@ -1,3 +1,20 @@
 package com.example.madlevel4task1.models
 
-data class Product(var name: String, var amount: Int)
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "product_table")
+class Product(
+
+
+    @ColumnInfo()
+    var name: String,
+
+    @ColumnInfo()
+    var amount: Int,
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    var id: Int? = null
+)
