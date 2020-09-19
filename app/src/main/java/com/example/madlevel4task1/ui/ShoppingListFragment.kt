@@ -69,7 +69,7 @@ class ShoppingListFragment : Fragment() {
                 viewHolder: RecyclerView.ViewHolder,
                 target: RecyclerView.ViewHolder
             ): Boolean {
-                TODO("Not yet implemented")
+                return false
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
@@ -98,6 +98,7 @@ class ShoppingListFragment : Fragment() {
             RecyclerView.VERTICAL
         )
         rv_products.addItemDecoration(dvItem)
+        createItemTouchHelper().attachToRecyclerView(rv_products)
         getShoppingListFromDatabase()
     }
 
